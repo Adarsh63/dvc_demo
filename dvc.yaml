@@ -8,3 +8,12 @@ stages:
     outs:
     - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/row/winequality-red.csv
 
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - src/split_data.py
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/row/winequality-red.csv
+    outs:
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/processed/train_winequality.csv
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/processed/test_winequality.csv
+
