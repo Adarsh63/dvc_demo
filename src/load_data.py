@@ -1,0 +1,22 @@
+# here get the data from data_source
+# save the data in data/raw for further process
+
+import os
+from get_data import read_params, get_data
+import argparse
+
+# will be calling load and save methode
+
+def load_and_save(config_path):
+    config = read_params(config_path)
+    df = get_data(config_path)
+    new_cols = [col.replace(" ","_") for col in df.columns]
+    raw_data_path = config['load_data']['raw_dataset_csv']
+    df.to_csv(raw_data_path, sep=",", index=False,header=new_cols)# when we are converting to_csv will get index thty we are putting index = flase and heaxder with new column
+    print(new_cols)
+
+if __name__ == "__main__":
+    args = argparse.ArgumentParser()
+    args.add_argument("--config", default="C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/params.yaml")
+    parsed_args = args.parse_args()
+    load_and_save(config_path=parsed_args.config)

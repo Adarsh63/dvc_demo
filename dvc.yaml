@@ -1,0 +1,10 @@
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - src/get_data.py
+    - src/load_data.py
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data_given/winequality-red.csv
+    outs:
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/row/winequality-red.csv
+
