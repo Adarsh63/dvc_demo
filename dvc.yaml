@@ -17,3 +17,23 @@ stages:
     - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/processed/train_winequality.csv
     - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/processed/test_winequality.csv
 
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/processed/train_winequality.csv
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data/processed/test_winequality.csv
+    - src/train_and_evaluate.py
+    params:
+    - estimators.ElasticNet.params.alpha
+    - estimators.ElasticNet.params.l1_ratio
+    metrics:
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/report/scores.json:
+        cache: false
+    - C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/report/params.json:
+        cache: false
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 base:
   project: winequality-project
   random_state: 42
-  target_col: TARGET
+  target_col: quality
 
 data_source:
   s3_source: C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/data_given/winequality-red.csv
@@ -24,7 +24,7 @@ estimators:
 model_dir: saved_models
 
 reports:
-  params: report/params.json
-  scores: report/scores.json
+  params: C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/report/params.json
+  scores: C:/Users/ADARSH/PycharmProjects/vnvp/mlopss/report/scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
