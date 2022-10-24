@@ -6,5 +6,14 @@ setup(
     packages = find_packages(),
     license ="MIT"
 )
+# setup command
 # pip install -e . this can help in download the package from the loacal directory this will be we are using after above
 # then we can run the command - python setup.py sdist bdist_wheel
+
+
+# for rebuilding tox commands is  -> tox -r
+
+# pytest commands
+# pytest -v
+
+

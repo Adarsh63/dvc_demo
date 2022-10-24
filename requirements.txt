@@ -1,9 +1,12 @@
+# 3rd party packege
 dvc
 dvc[gdrive]
 sklearn
 pandas
-yaml
 joblib
 numpy
 pytest
 tox
+
+# loack packege
+#e.
